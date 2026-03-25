@@ -48,12 +48,12 @@ public class ClasseVector {
                     IO.println(vetor.size());
                 }
             } else if (opcao == 3) {
-                IO.println("Digite o tamaho da linha do quadrado em centímetros: ");
+                IO.println("Digite o tamanho da linha do quadrado em centímetros: ");
                 tamanhoLinha = scanner.nextFloat();
                 quadrado = new Quadrado(tamanhoLinha);
                 vetor.add(quadrado);
             } else if (opcao == 4) {
-                if (vetor.size() == vetor.capacity() ) {
+                if (vetor.size() >= vetor.capacity() ) {
                     IO.println("Vetor cheio!");
                 } else {
                     IO.print("Digite a posição: ");
@@ -61,7 +61,7 @@ public class ClasseVector {
                     if (posicao > vetor.size() - 1 || posicao < 0) {
                         IO.println("Posição inválida!");
                     } else {
-                        IO.println("Digite o tamaho da linha do quadrado em centímetros: ");
+                        IO.println("Digite o tamanho da linha do quadrado em centímetros: ");
                         tamanhoLinha = scanner.nextFloat();
                         quadrado = new Quadrado(tamanhoLinha);
                         vetor.add(posicao, quadrado);
